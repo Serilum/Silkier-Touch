@@ -8,7 +8,7 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-public class ForgeBlockEventss {
+public class ForgeBlockEvents {
 	@SubscribeEvent
 	public static void onBlockBreak(BlockEvent.BreakEvent e) {
 		Level level = WorldFunctions.getWorldIfInstanceOfAndNotRemote(e.getLevel());
