@@ -3,9 +3,8 @@ package com.natamus.silkiertouch;
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
 import com.natamus.silkiertouch.forge.config.IntegrateForgeConfig;
-import com.natamus.silkiertouch.forge.events.ForgeBlockEventss;
+import com.natamus.silkiertouch.forge.events.ForgeBlockEvents;
 import com.natamus.silkiertouch.util.Reference;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
@@ -31,7 +30,7 @@ public class ModForge {
 	}
 
 	private void loadComplete(final FMLLoadCompleteEvent event) {
-        ForgeBlockEventss.registerEventsInBus();
+        ForgeBlockEvents.registerEventsInBus();
 	}
 
 	private static void setGlobalConstants() {
