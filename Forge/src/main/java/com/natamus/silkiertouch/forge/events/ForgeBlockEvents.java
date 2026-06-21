@@ -11,9 +11,9 @@ import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 
 import java.lang.invoke.MethodHandles;
 
-public class ForgeBlockEventss {
+public class ForgeBlockEvents {
 	public static void registerEventsInBus() {
-		BusGroup.DEFAULT.register(MethodHandles.lookup(), ForgeBlockEventss.class);
+		BusGroup.DEFAULT.register(MethodHandles.lookup(), ForgeBlockEvents.class);
 	}
 
 	@SubscribeEvent
