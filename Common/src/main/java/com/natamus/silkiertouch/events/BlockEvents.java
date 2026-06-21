@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.SpawnerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 
 public class BlockEvents {
 	public static boolean onBlockBreak(Level level, Player player, BlockPos blockPos, BlockState blockState, BlockEntity blockEntity) {
@@ -76,17 +77,18 @@ public class BlockEvents {
 				outStack = new ItemStack(block);
 			}
 		}
-		else if ((ConfigHandler.enableBuddedAmethystDrop && block instanceof BuddingAmethystBlock && isPickaxe) ||
-				(ConfigHandler.enableFarmlandDrop && block instanceof FarmBlock) ||
-				(ConfigHandler.enableTallGrassDrop && block instanceof TallGrassBlock) ||
-				(ConfigHandler.enableVinesDrop && block instanceof VineBlock) ||
-				(ConfigHandler.enableSnowLayerDrop && block instanceof SnowLayerBlock) ||
-				(ConfigHandler.enableInfestedStoneDrop && block instanceof InfestedBlock && isPickaxe)) {
+		else if (Util.isSilkTouchDrop(block, isPickaxe)) {
 			outStack = blockState.getBlock().getCloneItemStack(level, blockPos, blockState);
 		}
 
 		if (outStack != null) {
 			level.addFreshEntity(new ItemEntity(level, blockPos.getX() + 0.5, blockPos.getY() + 0.5, blockPos.getZ() + 0.5, outStack));
+
+			if (block instanceof DoublePlantBlock && blockState.hasProperty(DoublePlantBlock.HALF)) {
+				BlockPos otherPos = blockState.getValue(DoublePlantBlock.HALF) == DoubleBlockHalf.LOWER ? blockPos.above() : blockPos.below();
+				level.setBlock(otherPos, Blocks.AIR.defaultBlockState(), 35);
+			}
+
 			level.setBlock(blockPos, Blocks.AIR.defaultBlockState(), 3);
 			ItemFunctions.itemHurtBreakAndEvent(handStack, (ServerPlayer)player, interactionHand, 1);
 			return false;
@@ -128,7 +130,6 @@ public class BlockEvents {
 			return true;
 		}
 
-		level.setBlock(blockPos, blockState, 3);
 		TaskFunctions.enqueueCollectiveServerTask(level.getServer(), () -> {
 			BlockEntity blockEntity = level.getBlockEntity(blockPos);
 			if (blockEntity instanceof SpawnerBlockEntity spawnerBlockEntity) {
@@ -136,7 +137,6 @@ public class BlockEvents {
 			}
 		}, 0);
 
-		handStack.shrink(1);
-		return false;
+		return true;
 	}
 }
