@@ -1,10 +1,10 @@
-package com.natamus.silkiertouch;
+package com.serilum.silkiertouch;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
 import com.natamus.collective.fabric.callbacks.CollectiveBlockEvents;
-import com.natamus.silkiertouch.events.BlockEvents;
-import com.natamus.silkiertouch.util.Reference;
+import com.serilum.silkiertouch.events.BlockEvents;
+import com.serilum.silkiertouch.util.Reference;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 

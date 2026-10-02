@@ -1,7 +1,7 @@
-package com.natamus.silkiertouch.forge.events;
+package com.serilum.silkiertouch.forge.events;
 
 import com.natamus.collective.functions.WorldFunctions;
-import com.natamus.silkiertouch.events.BlockEvents;
+import com.serilum.silkiertouch.events.BlockEvents;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;

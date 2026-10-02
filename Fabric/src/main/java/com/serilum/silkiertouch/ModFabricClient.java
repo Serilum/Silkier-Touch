@@ -1,7 +1,7 @@
-package com.natamus.silkiertouch;
+package com.serilum.silkiertouch;
 
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.silkiertouch.util.Reference;
+import com.serilum.silkiertouch.util.Reference;
 import net.fabricmc.api.ClientModInitializer;
 
 public class ModFabricClient implements ClientModInitializer {

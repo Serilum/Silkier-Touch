@@ -1,7 +1,7 @@
-package com.natamus.silkiertouch.fabric.config;
+package com.serilum.silkiertouch.fabric.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.silkiertouch.util.Reference;
+import com.serilum.silkiertouch.util.Reference;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 

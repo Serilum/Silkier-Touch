@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "id": "silkiertouch",
-  "version": "1.3",
+  "version": "1.4",
 
   "name": "Silkier Touch",
   "description": "Extends Silk Touch functionality! Dragon eggs, spawners, cake, farmland and more!",
-  "authors": [ "Rick South" ],
+  "authors": [ "Serilum" ],
   "contact": {
     "homepage": "https://serilum.com/mod/silkier-touch",
     "sources": "https://github.com/Serilum/Silkier-Touch",
     "issues": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20Silkier%20Touch"
   },
 
-  "license": "All Right Reserved",
+  "license": "All Rights Reserved",
   "icon": "icon.png",
 
   "environment": "*",
-  "entrypoints": { "main": [ "com.natamus.silkiertouch.ModFabric" ], "client": [ "com.natamus.silkiertouch.ModFabricClient" ], "modmenu": [ "com.natamus.silkiertouch.fabric.config.IntegrateModMenu" ] },
+  "entrypoints": { "main": [ "com.serilum.silkiertouch.ModFabric" ], "client": [ "com.serilum.silkiertouch.ModFabricClient" ], "modmenu": [ "com.serilum.silkiertouch.fabric.config.IntegrateModMenu" ] },
   "mixins": [
     "silkiertouch.mixins.json"
   ],
@@ -26,13 +26,13 @@
     "fabric": "*",
     "minecraft": ">=1.20",
     "java": ">=17",
-    "collective": ">=8.29"
+    "collective": ">=8.40"
   },
 
   "custom": {
     "modmenu": {
       "links": {
-        "Donate <3" : "https://ricksouth.com/donate"
+        "Donate <3" : "https://serilum.com/donate"
       }
     }
   },
@@ -41,15 +41,14 @@
 	  " ",
 	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
 	  " ",
-	  "If you would like to contribute too, check out https://serilum.com/donate.",
+	  "If you would like to contribute too, check out https://serilum.com/donate",
 	  " ",
 	  "Membership sponsors:",
 	  " Andrean Olgo",
+	  " AnyankaT",
 	  " aternosorg",
 	  " Cherriesaurus",
-	  " Josh",
 	  " Linda Jansen",
-	  " Michelle Smith",
 	  " MWS",
 	  " Tyler Behl"
   ]

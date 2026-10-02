@@ -1,7 +1,7 @@
-package com.natamus.silkiertouch.config;
+package com.serilum.silkiertouch.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.silkiertouch.util.Reference;
+import com.serilum.silkiertouch.util.Reference;
 
 import java.util.Arrays;
 import java.util.HashMap;

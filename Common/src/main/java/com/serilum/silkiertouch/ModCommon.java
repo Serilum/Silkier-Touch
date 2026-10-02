@@ -1,6 +1,6 @@
-package com.natamus.silkiertouch;
+package com.serilum.silkiertouch;
 
-import com.natamus.silkiertouch.config.ConfigHandler;
+import com.serilum.silkiertouch.config.ConfigHandler;
 
 public class ModCommon {
 

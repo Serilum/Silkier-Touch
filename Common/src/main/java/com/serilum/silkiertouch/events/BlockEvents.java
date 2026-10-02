@@ -1,10 +1,10 @@
-package com.natamus.silkiertouch.events;
+package com.serilum.silkiertouch.events;
 
 import com.natamus.collective.functions.ItemFunctions;
 import com.natamus.collective.functions.TaskFunctions;
 import com.natamus.collective.services.Services;
-import com.natamus.silkiertouch.config.ConfigHandler;
-import com.natamus.silkiertouch.util.Util;
+import com.serilum.silkiertouch.config.ConfigHandler;
+import com.serilum.silkiertouch.util.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
